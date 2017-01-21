@@ -1,9 +1,8 @@
 
-#include <iostream.h>
-#include <fstream.h>
-#include <string.h>
-#include <iomanip.h>
-#include <conio.h>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
 
 class phoneBook{
     char name[20],phno[15];
