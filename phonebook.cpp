@@ -20,7 +20,7 @@ class phoneBook{
 void phoneBook :: getdata(){
     cout<<"\nEnter Name : ";
     cin>>name;
-    cout<<"Enter Phone No. : ";
+    cout<<"Enter Phone No. : "; 
     cin>>phno;
 }
 
