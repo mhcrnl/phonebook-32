@@ -1,8 +1,10 @@
-
+#include <stdio.h>
 #include <iostream>
 #include <fstream>
-#include <string>
-#include <iomanip> 
+#include <string.h>
+#include <iomanip>
+
+using namespace std;
 
 class phoneBook{
     char name[20],phno[15];
@@ -20,7 +22,7 @@ class phoneBook{
 void phoneBook :: getdata(){
     cout<<"\nEnter Name : ";
     cin>>name;
-    cout<<"Enter Phone No. : "; 
+    cout<<"Enter Phone No. : ";
     cin>>phno;
 }
 
@@ -31,14 +33,14 @@ void phoneBook :: showdata(){
 }
 
 
-void main(){
+int main(){
     phoneBook rec;
     fstream file;
     file.open("d:\\phone.dat", ios::ate | ios::in | ios::out | ios::binary);
     char ch,nm[20],telno[6];
     int choice,found=0;
     while(1){
-        clrscr();
+        //clrscr();
         cout<<"\n*****Phone Book*****\n";
         cout<<"1) Add New Record\n";
         cout<<"2) Display All Records\n";
@@ -64,7 +66,7 @@ void main(){
                         rec.showdata();
                  }
                  file.clear();
-                 getch();
+                 //getch();
                  break;
 
             case 3 : //Search Tel. no. when person name is known.
@@ -83,7 +85,7 @@ void main(){
                  file.clear();
                  if(found==0)
                     cout<<"\n\n---Record Not found---\n";
-                 getch();
+                 //getch();
                  break;
 
             case 4 : //Search name on basis of tel. no
@@ -102,7 +104,7 @@ void main(){
                  file.clear();
                  if(found==0)
                     cout<<"\n\n---Record Not found---\n";
-                 getch();
+                 //getch();
                  break;
 
             case 5 : //Update Telephone No.
@@ -138,9 +140,9 @@ void main(){
                     file.flush();
                  }
                  break;
-            case 6 : gotoout;
+            //case 6 : goto out;
         }
     }
-out:
+//out:
 file.close();
 }
